@@ -1,0 +1,18 @@
+{
+    "variables": {
+        "api-token": ""
+    },
+    "builders": [
+        {
+            "type": "digitalocean",
+
+            "api_token": "{{ user `api-token` }}",
+            "image": "coreos-stable",
+            "region": "fra1",
+            "size": "512mb",
+
+            "private_networking": true,
+            "ssh_username": "core"
+        }
+    ]
+}
